@@ -18,4 +18,9 @@ public class UserController {
         userService.deleteById(id);
     }
 
+    @GetMapping("getById")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void getById(@RequestParam Long id) {
+        userService.findById(id);
+    }
 }
